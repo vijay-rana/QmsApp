@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
+            <connections>
+                <outlet property="lblLicenseExpiryDate" destination="vmv-py-IrB" id="jAP-U8-aWF"/>
+                <outlet property="view" destination="SBV-xH-J86" id="jxO-IN-i5z"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="SBV-xH-J86">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default1.png" translatesAutoresizingMaskIntoConstraints="NO" id="T46-94-OG7">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="License Expire:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ga-d2-DzP">
+                    <rect key="frame" x="669" y="908" width="99" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label dfyertyt5yet5yertysd" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmv-py-IrB">
+                    <rect key="frame" x="596" y="930" width="172" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUg-Dj-k9O">
+                    <rect key="frame" x="717" y="436" width="25" height="131"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="lGT-7o-YQV"/>
+                    </constraints>
+                    <state key="normal" image="swipe.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7Q-hN-HT0">
+                    <rect key="frame" x="434" y="953" width="334" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="334" id="UCt-im-3PC"/>
+                        <constraint firstAttribute="height" constant="43" id="Z08-nG-mvv"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnAboutQMSTapped:" destination="-1" eventType="touchUpInside" id="rHp-Ej-fhx"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="T46-94-OG7" firstAttribute="top" secondItem="SBV-xH-J86" secondAttribute="top" id="3jY-Tc-qz5"/>
+                <constraint firstAttribute="trailing" secondItem="dUg-Dj-k9O" secondAttribute="trailing" constant="26" id="A0c-81-J6b"/>
+                <constraint firstItem="T46-94-OG7" firstAttribute="leading" secondItem="SBV-xH-J86" secondAttribute="leading" id="JOU-dW-Uue"/>
+                <constraint firstAttribute="centerY" secondItem="dUg-Dj-k9O" secondAttribute="centerY" id="KCE-nh-vzc"/>
+                <constraint firstItem="vmv-py-IrB" firstAttribute="top" secondItem="8ga-d2-DzP" secondAttribute="bottom" constant="5" id="KTs-o0-VdK"/>
+                <constraint firstAttribute="bottom" secondItem="D7Q-hN-HT0" secondAttribute="bottom" constant="8" id="XU8-tT-WKg"/>
+                <constraint firstAttribute="trailing" secondItem="T46-94-OG7" secondAttribute="trailing" id="Zgh-xm-ZiL"/>
+                <constraint firstAttribute="trailing" secondItem="vmv-py-IrB" secondAttribute="trailing" id="cXj-6X-K2M"/>
+                <constraint firstAttribute="trailing" secondItem="D7Q-hN-HT0" secondAttribute="trailing" id="fo2-jV-7Xt"/>
+                <constraint firstAttribute="trailing" secondItem="8ga-d2-DzP" secondAttribute="trailing" id="mqL-do-Y5v"/>
+                <constraint firstItem="D7Q-hN-HT0" firstAttribute="top" secondItem="vmv-py-IrB" secondAttribute="bottom" constant="6" id="pEx-X8-Lmy"/>
+                <constraint firstAttribute="bottom" secondItem="T46-94-OG7" secondAttribute="bottom" id="rY9-Kp-017"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="169" y="215"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="default1.png" width="1536" height="2048"/>
+        <image name="swipe.png" width="23" height="131"/>
+    </resources>
+</document>

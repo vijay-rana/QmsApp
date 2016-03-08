@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="OsE-Ed-AIc" customClass="SSFindServiceSliderTableViewHeader">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rph-fm-xJA" userLabel="ContentView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSQ-QZ-awy">
+                            <rect key="frame" x="34" y="10" width="41" height="20"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <color key="textColor" red="0.0" green="0.25098039220000001" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Close.png" translatesAutoresizingMaskIntoConstraints="NO" id="QX0-FS-wFB">
+                            <rect key="frame" x="4" y="0.0" width="25" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="mYx-7y-QcB"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="0.83000000000000007" colorSpace="custom" customColorSpace="sRGB"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstItem="hSQ-QZ-awy" firstAttribute="leading" secondItem="QX0-FS-wFB" secondAttribute="trailing" constant="5" id="GeC-gO-EVu"/>
+                        <constraint firstItem="QX0-FS-wFB" firstAttribute="leading" secondItem="rph-fm-xJA" secondAttribute="leading" constant="4" id="HkV-JW-9vH"/>
+                        <constraint firstAttribute="centerY" secondItem="QX0-FS-wFB" secondAttribute="centerY" id="QQy-4d-TSM"/>
+                        <constraint firstAttribute="centerY" secondItem="hSQ-QZ-awy" secondAttribute="centerY" id="hUw-L3-Q9V"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="rph-fm-xJA" firstAttribute="top" secondItem="OsE-Ed-AIc" secondAttribute="top" id="EYo-YO-SIs"/>
+                <constraint firstItem="rph-fm-xJA" firstAttribute="leading" secondItem="OsE-Ed-AIc" secondAttribute="leading" id="F5h-ey-LBs"/>
+                <constraint firstAttribute="bottom" secondItem="rph-fm-xJA" secondAttribute="bottom" id="F5y-Oi-PMs"/>
+                <constraint firstAttribute="trailing" secondItem="rph-fm-xJA" secondAttribute="trailing" id="XIf-wz-6g3"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="expandImageView" destination="QX0-FS-wFB" id="tLP-of-fTs"/>
+                <outlet property="titleLabel" destination="hSQ-QZ-awy" id="0Rs-mh-v72"/>
+            </connections>
+            <point key="canvasLocation" x="221" y="319"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Close.png" width="40" height="40"/>
+    </resources>
+</document>

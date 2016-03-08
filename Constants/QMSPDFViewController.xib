@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QMSPDFViewController">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="Qzo-j7-1vz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bnP-co-pmy">
+                    <rect key="frame" x="0.0" y="60" width="300" height="240"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bh3-LK-dmM">
+                    <rect key="frame" x="240" y="22" width="46" height="30"/>
+                    <state key="normal" title="Done">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="doneBtnPressed:" destination="-1" eventType="touchUpInside" id="Xjm-nZ-opd"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="bnP-co-pmy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9R1-Vf-NSF"/>
+                <constraint firstAttribute="bottom" secondItem="bnP-co-pmy" secondAttribute="bottom" id="D8J-1k-H6f"/>
+                <constraint firstAttribute="trailing" secondItem="bh3-LK-dmM" secondAttribute="trailing" constant="14" id="DlH-4x-lkP"/>
+                <constraint firstItem="bh3-LK-dmM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="22" id="RMO-hk-d62"/>
+                <constraint firstAttribute="trailing" secondItem="bnP-co-pmy" secondAttribute="trailing" id="oeb-9N-uQn"/>
+                <constraint firstItem="bnP-co-pmy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="rgL-9Z-8uN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

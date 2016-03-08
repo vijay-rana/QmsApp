@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
+            <connections>
+                <outlet property="btnEnter" destination="7W2-a1-7zu" id="rdB-sh-HKI"/>
+                <outlet property="lblLicenseExpiryDate" destination="chy-0M-sgW" id="zPr-r7-dmy"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default1.png" translatesAutoresizingMaskIntoConstraints="NO" id="H6I-ep-br1">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label dfyerty" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chy-0M-sgW">
+                    <rect key="frame" x="259" y="522" width="61" height="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="License Expire:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6uO-bU-hgp">
+                    <rect key="frame" x="241" y="508" width="79" height="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7W2-a1-7zu">
+                    <rect key="frame" x="293" y="247" width="16" height="75"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="CEx-kT-6ZZ"/>
+                        <constraint firstAttribute="width" constant="16" id="DQn-t3-AgO"/>
+                    </constraints>
+                    <state key="normal" image="swipe.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnEnter_TouchDown:" destination="-1" eventType="touchDown" id="vXR-Je-Cip"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2b-0x-eNv">
+                    <rect key="frame" x="160" y="534" width="160" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="160" id="LaH-ch-Vbd"/>
+                        <constraint firstAttribute="height" constant="34" id="cTf-So-wb6"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnAboutQMSTapped:" destination="-1" eventType="touchUpInside" id="wh6-6L-ol6"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="H6I-ep-br1" secondAttribute="bottom" id="0IA-FE-RCQ"/>
+                <constraint firstItem="H6I-ep-br1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1Jc-Mx-1v6"/>
+                <constraint firstItem="H6I-ep-br1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4eX-YN-msY"/>
+                <constraint firstAttribute="trailing" secondItem="7W2-a1-7zu" secondAttribute="trailing" constant="11" id="7j3-ay-X6C"/>
+                <constraint firstAttribute="trailing" secondItem="S2b-0x-eNv" secondAttribute="trailing" id="YIx-xH-OaO"/>
+                <constraint firstAttribute="trailing" secondItem="H6I-ep-br1" secondAttribute="trailing" id="emT-hT-7wT"/>
+                <constraint firstAttribute="bottom" secondItem="S2b-0x-eNv" secondAttribute="bottom" id="j7G-Tp-gDf"/>
+                <constraint firstAttribute="centerY" secondItem="7W2-a1-7zu" secondAttribute="centerY" id="kQ3-yD-uB3"/>
+                <constraint firstItem="S2b-0x-eNv" firstAttribute="top" secondItem="chy-0M-sgW" secondAttribute="bottom" id="olO-sv-wOg"/>
+                <constraint firstItem="chy-0M-sgW" firstAttribute="top" secondItem="6uO-bU-hgp" secondAttribute="bottom" id="vaN-bL-L5n"/>
+                <constraint firstAttribute="trailing" secondItem="chy-0M-sgW" secondAttribute="trailing" id="xrZ-r9-pia"/>
+                <constraint firstAttribute="trailing" secondItem="6uO-bU-hgp" secondAttribute="trailing" id="yn2-p8-Fo7"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="default1.png" width="1536" height="2048"/>
+        <image name="swipe.png" width="23" height="131"/>
+    </resources>
+</document>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DataFormVC">
+            <connections>
+                <outlet property="btnsidePanel" destination="5X4-cU-yys" id="bHT-cc-Zlg"/>
+                <outlet property="logoutLabel" destination="UZi-zT-TZr" id="YAk-9V-eWq"/>
+                <outlet property="overlayView" destination="XDH-kg-Z14" id="1Lh-A0-vGk"/>
+                <outlet property="sidePanelView" destination="8Mu-qX-WK5" id="YOW-PG-U1g"/>
+                <outlet property="tableViewDataSource" destination="1DH-7c-MUA" id="OQP-xs-yph"/>
+                <outlet property="view" destination="RmZ-eL-H88" id="ouf-JW-EP9"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="RmZ-eL-H88">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ojv-da-ibL">
+                    <rect key="frame" x="0.0" y="20" width="768" height="55"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navbar_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="7Bs-EW-SDb">
+                            <rect key="frame" x="0.0" y="0.0" width="768" height="55"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5X4-cU-yys">
+                            <rect key="frame" x="703" y="8" width="50" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="7Xd-vB-lz1"/>
+                                <constraint firstAttribute="height" constant="40" id="ftT-p4-dJx"/>
+                            </constraints>
+                            <state key="normal" image="menu.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btnFormsMenuTapped:" destination="-1" eventType="touchUpInside" id="PBG-Hf-Nxc"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data Forms - Collect Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Mm-Dz-t1O">
+                            <rect key="frame" x="15" y="16" width="228" height="23"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="5X4-cU-yys" secondAttribute="trailing" constant="15" id="4pZ-0r-VxI"/>
+                        <constraint firstAttribute="centerY" secondItem="4Mm-Dz-t1O" secondAttribute="centerY" id="5Ud-6h-nYX"/>
+                        <constraint firstAttribute="trailing" secondItem="7Bs-EW-SDb" secondAttribute="trailing" id="8Oj-8R-hTa"/>
+                        <constraint firstAttribute="centerY" secondItem="5X4-cU-yys" secondAttribute="centerY" id="95Y-jO-Il9"/>
+                        <constraint firstAttribute="height" constant="55" id="CE8-1z-3RH"/>
+                        <constraint firstItem="7Bs-EW-SDb" firstAttribute="leading" secondItem="ojv-da-ibL" secondAttribute="leading" id="Gd0-bS-CgM"/>
+                        <constraint firstItem="7Bs-EW-SDb" firstAttribute="top" secondItem="ojv-da-ibL" secondAttribute="top" id="cXZ-4C-Mgv"/>
+                        <constraint firstAttribute="bottom" secondItem="7Bs-EW-SDb" secondAttribute="bottom" id="d8v-Ov-jAp"/>
+                        <constraint firstItem="4Mm-Dz-t1O" firstAttribute="leading" secondItem="ojv-da-ibL" secondAttribute="leading" constant="15" id="zJI-i2-xWB"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="44" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="261-iF-bSI">
+                    <rect key="frame" x="0.0" y="76" width="768" height="928"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="1DH-7c-MUA" id="Bzo-gm-Uvp"/>
+                        <outlet property="delegate" destination="1DH-7c-MUA" id="IbT-TD-gb1"/>
+                    </connections>
+                </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XDH-kg-Z14" userLabel="OverlayView">
+                    <rect key="frame" x="0.0" y="20" width="468" height="984"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="fFj-m8-Ccy" appends="YES" id="dK4-bD-lBB"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Mu-qX-WK5">
+                    <rect key="frame" x="468" y="75" width="300" height="929"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swipeBG.png" translatesAutoresizingMaskIntoConstraints="NO" id="SBo-aV-7pP">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="929"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfj-QJ-N8X">
+                            <rect key="frame" x="0.0" y="116" width="308" height="56"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <state key="normal" image="swipeMenu.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btnPanelAbout:" destination="-1" eventType="touchUpInside" id="E98-dQ-Ztk"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aej-po-7tb">
+                            <rect key="frame" x="0.0" y="59" width="308" height="56"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <state key="normal" image="swipeMenu.png">
+                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btnPanelUploadFormData:" destination="-1" eventType="touchUpInside" id="uma-YG-VbC"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEn-Qw-fSU">
+                            <rect key="frame" x="0.0" y="2" width="308" height="56"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <state key="normal" image="swipeMenu.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btnPanelDownloadFormTemplate:" destination="-1" eventType="touchUpInside" id="KpV-VB-FQ6"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upload Form Data" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eq-uS-nXn">
+                            <rect key="frame" x="15" y="65" width="202" height="43"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.27469824739999998" green="0.27469824739999998" blue="0.27469824739999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Download Form Templates" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfL-BQ-H9K">
+                            <rect key="frame" x="15" y="8" width="245" height="43"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.27469824739999998" green="0.27469824739999998" blue="0.27469824739999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXf-TP-cga">
+                            <rect key="frame" x="15" y="123" width="230" height="43"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.27469824739999998" green="0.27469824739999998" blue="0.27469824739999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaB-MO-Mue">
+                            <rect key="frame" x="0.0" y="173" width="308" height="56"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <state key="normal" image="swipeMenu.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btnLogout:" destination="-1" eventType="touchUpInside" id="EmK-2T-je8"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Logout" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZi-zT-TZr">
+                            <rect key="frame" x="15" y="180" width="230" height="43"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.27469824739999998" green="0.27469824739999998" blue="0.27469824739999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="SBo-aV-7pP" secondAttribute="bottom" id="E50-KT-xvl"/>
+                        <constraint firstAttribute="width" constant="300" id="Mcl-7p-XKH"/>
+                        <constraint firstItem="SBo-aV-7pP" firstAttribute="leading" secondItem="8Mu-qX-WK5" secondAttribute="leading" id="RkQ-wI-MTD"/>
+                        <constraint firstAttribute="trailing" secondItem="SBo-aV-7pP" secondAttribute="trailing" id="Wd8-rO-Cre"/>
+                        <constraint firstItem="SBo-aV-7pP" firstAttribute="top" secondItem="8Mu-qX-WK5" secondAttribute="top" id="qJK-I5-Yh8"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="261-iF-bSI" firstAttribute="leading" secondItem="RmZ-eL-H88" secondAttribute="leading" id="1PB-oG-aaz"/>
+                <constraint firstItem="8Mu-qX-WK5" firstAttribute="top" secondItem="ojv-da-ibL" secondAttribute="bottom" id="9rW-ew-IdT"/>
+                <constraint firstAttribute="bottom" secondItem="8Mu-qX-WK5" secondAttribute="bottom" id="A5A-6b-KaW"/>
+                <constraint firstAttribute="trailing" secondItem="ojv-da-ibL" secondAttribute="trailing" id="Azf-my-7gO"/>
+                <constraint firstAttribute="trailing" secondItem="261-iF-bSI" secondAttribute="trailing" id="Cwh-ZJ-YkM"/>
+                <constraint firstAttribute="bottom" secondItem="261-iF-bSI" secondAttribute="bottom" id="GtT-j6-9y8"/>
+                <constraint firstItem="ojv-da-ibL" firstAttribute="top" secondItem="RmZ-eL-H88" secondAttribute="top" constant="20" id="Hsq-0H-RT8"/>
+                <constraint firstItem="XDH-kg-Z14" firstAttribute="top" secondItem="RmZ-eL-H88" secondAttribute="top" constant="20" id="JMz-BZ-fxk"/>
+                <constraint firstItem="XDH-kg-Z14" firstAttribute="leading" secondItem="RmZ-eL-H88" secondAttribute="leading" id="TlR-KO-Uew"/>
+                <constraint firstItem="261-iF-bSI" firstAttribute="top" secondItem="ojv-da-ibL" secondAttribute="bottom" constant="1" id="eiu-Do-yFF"/>
+                <constraint firstAttribute="trailing" secondItem="8Mu-qX-WK5" secondAttribute="trailing" id="mHf-01-EDn"/>
+                <constraint firstAttribute="bottom" secondItem="XDH-kg-Z14" secondAttribute="bottom" id="tR6-4e-QLU"/>
+                <constraint firstItem="ojv-da-ibL" firstAttribute="leading" secondItem="RmZ-eL-H88" secondAttribute="leading" id="tbj-Pq-FRu"/>
+                <constraint firstItem="8Mu-qX-WK5" firstAttribute="leading" secondItem="XDH-kg-Z14" secondAttribute="trailing" id="w52-vs-ozP"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="296" y="165"/>
+        </view>
+        <customObject id="1DH-7c-MUA" customClass="QMSDataFormsTableViewDataSource">
+            <connections>
+                <outlet property="delegateQMSTableViewDataSource" destination="-1" id="K3u-PW-az9"/>
+                <outlet property="delegateTableViewDataSource" destination="-1" id="3QV-MS-yKa"/>
+                <outlet property="tableView" destination="261-iF-bSI" id="Qb9-bs-WVW"/>
+            </connections>
+        </customObject>
+        <tapGestureRecognizer id="fFj-m8-Ccy">
+            <connections>
+                <action selector="hideSlider:" destination="-1" id="OhR-31-T0Y"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="menu.png" width="59" height="44"/>
+        <image name="navbar_bg.png" width="768" height="44"/>
+        <image name="swipeBG.png" width="172" height="480"/>
+        <image name="swipeMenu.png" width="361" height="56"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

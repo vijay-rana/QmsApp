@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14B25" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="QMSPDFTemplate" representedClassName="QMSPDFTemplate" syncable="YES">
+        <attribute name="createdBy" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="customerId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="downloadUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isActive" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isDownLoaded" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="pdfTemplateId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="pdfTemplateName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="templateTypeId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="QMSPDFTemplateCopy" representedClassName="QMSPDFTemplateCopy" syncable="YES">
+        <attribute name="creationDateTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="pdfFileEditingDone" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="pdfTemplateDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pdfTemplateId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="QMSTemplate" representedClassName="QMSTemplate" syncable="YES">
+        <attribute name="templateTypeId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="templateTypeName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="templateOwner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="QMSUser" syncable="YES"/>
+    </entity>
+    <entity name="QMSUser" representedClassName="QMSUser" syncable="YES">
+        <attribute name="isCurrentUser" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="token" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="QMSPDFTemplate" positionX="-54" positionY="9" width="128" height="165"/>
+        <element name="QMSPDFTemplateCopy" positionX="-54" positionY="54" width="128" height="105"/>
+        <element name="QMSTemplate" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="QMSUser" positionX="-54" positionY="27" width="128" height="105"/>
+    </elements>
+</model>
