@@ -224,8 +224,10 @@
 		52D8A7D01AFBEBEF0075B48F /* QMSDataFormsTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52D8A7CF1AFBEBEF0075B48F /* QMSDataFormsTableViewHeader.xib */; };
 		52D9C5521AE57ED200165BF3 /* QMSDataFormsTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D9C5511AE57ED200165BF3 /* QMSDataFormsTableViewDataSource.m */; };
 		52EC323F1AE190CD00421876 /* QMSDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52EC323D1AE190CD00421876 /* QMSDataModel.xcdatamodeld */; };
-		62A8DE881C8EEEE600FD27C0 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A8DE861C8EEEE600FD27C0 /* MainMenuViewController.m */; };
-		62A8DE891C8EEEE600FD27C0 /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62A8DE871C8EEEE600FD27C0 /* MainMenuViewController.xib */; };
+		62BFBE151C91AC80004438ED /* InspectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62BFBE131C91AC80004438ED /* InspectionsViewController.m */; };
+		62BFBE161C91AC80004438ED /* InspectionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62BFBE141C91AC80004438ED /* InspectionsViewController.xib */; };
+		62C05F901C913A600099687B /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C05F8B1C913A600099687B /* MainMenuViewController.m */; };
+		62C05F911C913A600099687B /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62C05F8C1C913A600099687B /* MainMenuViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -548,9 +550,12 @@
 		52D9C5501AE57ED200165BF3 /* QMSDataFormsTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QMSDataFormsTableViewDataSource.h; path = Constants/QMSDataFormsTableViewDataSource.h; sourceTree = "<group>"; };
 		52D9C5511AE57ED200165BF3 /* QMSDataFormsTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QMSDataFormsTableViewDataSource.m; path = Constants/QMSDataFormsTableViewDataSource.m; sourceTree = "<group>"; };
 		52EC323E1AE190CD00421876 /* QMSDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QMSDataModel.xcdatamodel; sourceTree = "<group>"; };
-		62A8DE851C8EEEE600FD27C0 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
-		62A8DE861C8EEEE600FD27C0 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
-		62A8DE871C8EEEE600FD27C0 /* MainMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuViewController.xib; sourceTree = "<group>"; };
+		62BFBE121C91AC80004438ED /* InspectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InspectionsViewController.h; sourceTree = "<group>"; };
+		62BFBE131C91AC80004438ED /* InspectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InspectionsViewController.m; sourceTree = "<group>"; };
+		62BFBE141C91AC80004438ED /* InspectionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InspectionsViewController.xib; sourceTree = "<group>"; };
+		62C05F8A1C913A600099687B /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainMenuViewController.h; path = QMS/MainMenuViewController.h; sourceTree = "<group>"; };
+		62C05F8B1C913A600099687B /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainMenuViewController.m; path = QMS/MainMenuViewController.m; sourceTree = "<group>"; };
+		62C05F8C1C913A600099687B /* MainMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenuViewController.xib; path = QMS/MainMenuViewController.xib; sourceTree = "<group>"; };
 		62F20CAA1C898FB100D3148E /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -730,7 +735,8 @@
 		3E99BCE41A9DC96D00BBFCA6 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				62A8DE8A1C8EEF0600FD27C0 /* MainMenuController */,
+				62BFBE181C91ACA3004438ED /* MainMenu Controller */,
+				62BFBE171C91AC86004438ED /* Inspection ViewController */,
 				3E9054731A9DE1E500724167 /* Login Screen */,
 				3E99BCE61A9DC9D000BBFCA6 /* Home Screen */,
 				3ED792CE1AB9AE5A00BA6631 /* Data Forms */,
@@ -1172,14 +1178,25 @@
 			name = QMSCoreData;
 			sourceTree = "<group>";
 		};
-		62A8DE8A1C8EEF0600FD27C0 /* MainMenuController */ = {
+		62BFBE171C91AC86004438ED /* Inspection ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				62A8DE851C8EEEE600FD27C0 /* MainMenuViewController.h */,
-				62A8DE861C8EEEE600FD27C0 /* MainMenuViewController.m */,
-				62A8DE871C8EEEE600FD27C0 /* MainMenuViewController.xib */,
+				62BFBE121C91AC80004438ED /* InspectionsViewController.h */,
+				62BFBE131C91AC80004438ED /* InspectionsViewController.m */,
+				62BFBE141C91AC80004438ED /* InspectionsViewController.xib */,
 			);
-			name = MainMenuController;
+			name = "Inspection ViewController";
+			sourceTree = "<group>";
+		};
+		62BFBE181C91ACA3004438ED /* MainMenu Controller */ = {
+			isa = PBXGroup;
+			children = (
+				62C05F8A1C913A600099687B /* MainMenuViewController.h */,
+				62C05F8B1C913A600099687B /* MainMenuViewController.m */,
+				62C05F8C1C913A600099687B /* MainMenuViewController.xib */,
+			);
+			name = "MainMenu Controller";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		62F20CA91C898F7D00D3148E /* SupportFiles */ = {
@@ -1304,7 +1321,7 @@
 				3EB67AE01AAEEBD800A2C716 /* swipeMenu@2x.png in Resources */,
 				3E92E9EB1AA1982D0058D35D /* swipe@2x.png in Resources */,
 				3E92E9F41AA1982D0058D35D /* upload_title.png in Resources */,
-				62A8DE891C8EEEE600FD27C0 /* MainMenuViewController.xib in Resources */,
+				62C05F911C913A600099687B /* MainMenuViewController.xib in Resources */,
 				52D58CB91AE40195006634B4 /* SSFindServiceSliderTableViewHeader.xib in Resources */,
 				52D58CB71AE400AC006634B4 /* SSTableViewCell.xib in Resources */,
 				3EB440201AA1EF6F004EC766 /* default1@2x.png in Resources */,
@@ -1350,6 +1367,7 @@
 				3E92E9DE1AA1982D0058D35D /* loginPopup.png in Resources */,
 				3EBE95781A9D9F7700D74111 /* InfoPlist.strings in Resources */,
 				3E1B97611A9DCD7800DEC137 /* UploadFormDataVC.xib in Resources */,
+				62BFBE161C91AC80004438ED /* InspectionsViewController.xib in Resources */,
 				3E92E9E21AA1982D0058D35D /* minus.png in Resources */,
 				3E965E271AD3FCF400014657 /* qms_1024.png in Resources */,
 				52367A971B07BAEC00907AB6 /* done@2x.png in Resources */,
@@ -1387,7 +1405,7 @@
 				3EBEFCA81ACD128600FE930F /* AFNetworkActivityIndicatorManager.m in Sources */,
 				3ED41BB71AA5A3DF0039F93A /* RADataObject.m in Sources */,
 				52CA38A91AE2DAB500384AF2 /* QMSPDFTemplate.m in Sources */,
-				62A8DE881C8EEEE600FD27C0 /* MainMenuViewController.m in Sources */,
+				62C05F901C913A600099687B /* MainMenuViewController.m in Sources */,
 				3ED41BAE1AA5A2C60039F93A /* RATreeView+Enums.m in Sources */,
 				5232E5291AFE24D500394AC2 /* PDFUtility.m in Sources */,
 				52CA38AC1AE2DAB600384AF2 /* QMSUser.m in Sources */,
@@ -1456,6 +1474,7 @@
 				5232E5241AFE24D500394AC2 /* PDFDocument.m in Sources */,
 				52EC323F1AE190CD00421876 /* QMSDataModel.xcdatamodeld in Sources */,
 				5232E51F1AFE24D500394AC2 /* PDFName.m in Sources */,
+				62BFBE151C91AC80004438ED /* InspectionsViewController.m in Sources */,
 				3EBEFCA51ACD128600FE930F /* AFURLRequestSerialization.m in Sources */,
 				52D6932A1B23771C0093AF51 /* QMSNetworkManager.m in Sources */,
 				3ED8664A1AC2A5EF00C8323D /* DownloadFromTemp.m in Sources */,

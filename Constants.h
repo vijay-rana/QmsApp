@@ -8,23 +8,23 @@
 
 #ifndef Constants_h
 #define Constants_h
-//http://qmswatch.kindlebit.com/API.asmx/UploadPDFDataForm"
 
-#define SITE_URL                            @"http://qmswatch.com/"// @"
-#define API_asmx                           @"API.asmx/"
-#define API_URL_BASE                       [SITE_URL stringByAppendingString:API_asmx]
-#define UploadPDFDataForm                   [API_URL_BASE stringByAppendingString:@"UploadPDFDataForm"]
-#define EditPDFDataForm                   [API_URL_BASE stringByAppendingString:@"EditPDFDataForm"]
-#define DownloadPDFTemplateByTemplateTypeId                   [API_URL_BASE stringByAppendingString:@"DownloadPDFTemplateByTemplateTypeId"]
-#define SendMail                   [API_URL_BASE stringByAppendingString:@"SendMail"]
-#define PDFDataFormListByTemplateId                   [API_URL_BASE stringByAppendingString:@"PDFDataFormListByTemplateId"]
-#define DownloadTemplateFile                   [API_URL_BASE stringByAppendingString:@"DownloadTemplateFile"]
-#define DownloadPDFTemplateTypes                   [API_URL_BASE stringByAppendingString:@"DownloadPDFTemplateTypes"]
-#define DownloadPDFTemplateByTemplateTypeId                   [API_URL_BASE stringByAppendingString:@"DownloadPDFTemplateByTemplateTypeId"]
-#define CheckLicenseExpiryDate                   [API_URL_BASE stringByAppendingString:@"CheckLicenseExpiryDate"]
-#define AuthenticateUser                   [API_URL_BASE stringByAppendingString:@"AuthenticateUser"]
-#define UploadPDFDataFormBase64                   [API_URL_BASE stringByAppendingString:@"UploadPDFDataFormBase64"]
+//@"http://qmswatch.kindlebit.com/API.asmx/AuthenticateUser"]]];UploadPDFDataForm
 
+#define SITE_URL                            @"http://qmswatch.com/"
+#define asmx_Url                            @"API.asmx/"
+#define qmsFull_Url                         [SITE_URL stringByAppendingString:asmx_Url]
 
-
+#define DownloadTemplateFile                [qmsFull_Url stringByAppendingString:@"DownloadTemplateFile"]
+#define UploadPDFDataForm                [qmsFull_Url stringByAppendingString:@"UploadPDFDataForm"]
+#define EditPDFDataForm                [qmsFull_Url stringByAppendingString:@"EditPDFDataForm"]
+#define DownloadPDFTemplateByTemplateTypeId                [qmsFull_Url stringByAppendingString:@"DownloadPDFTemplateByTemplateTypeId"]
+#define SendMail                [qmsFull_Url stringByAppendingString:@"SendMail"]
+#define PDFDataFormListByTemplateId                [qmsFull_Url stringByAppendingString:@"PDFDataFormListByTemplateId"]
+#define UploadPDFDataForm                [qmsFull_Url stringByAppendingString:@"UploadPDFDataForm"]
+#define DownloadPDFTemplateTypes                [qmsFull_Url stringByAppendingString:@"DownloadPDFTemplateTypes"]
+#define UploadPDFDataFormBase64                [qmsFull_Url stringByAppendingString:@"UploadPDFDataFormBase64"]
+#define CheckLicenseExpiryDate                [qmsFull_Url stringByAppendingString:@"CheckLicenseExpiryDate"]
+#define AuthenticateUser                [qmsFull_Url stringByAppendingString:@"AuthenticateUser"]
+#define UploadPDFDataFormBase64                [qmsFull_Url stringByAppendingString:@"UploadPDFDataFormBase64"]
 #endif /* Constants_h */

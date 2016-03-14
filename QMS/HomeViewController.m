@@ -11,6 +11,7 @@
 #import "DownloadFormTemplateVC.h"
 #import "DataFormVC.h"
 #import"MBProgressHUD.h"
+#import "MainMenuViewController.h"
 
 #import <sqlite3.h>
 
@@ -90,7 +91,7 @@
     //Do moving
     NSLog(@"--Do Moving Right-------Data Form View");
     
-    DataFormVC *dataFormVC=[[DataFormVC alloc]initWithNibName:@"DataFormVC" bundle:nil];
+    MainMenuViewController *dataFormVC=[[MainMenuViewController alloc]initWithNibName:@"MainMenuViewController" bundle:nil];
     [self.navigationController pushViewController:dataFormVC animated:NO];
 }
 
@@ -113,12 +114,12 @@
 {
 
 if ([self isFormsAvailable] == YES) {
-    DataFormVC *dataFormVC=[[DataFormVC alloc]initWithNibName:@"DataFormVC" bundle:nil];
+    MainMenuViewController *dataFormVC=[[MainMenuViewController alloc]initWithNibName:@"MainMenuViewController" bundle:nil];
     [self.navigationController pushViewController:dataFormVC animated:NO];
  } else{
     // do moving
     NSLog(@"--Do Moving Left------------Download Form Template Form");
-    DownloadFormTemplateVC *downloadFormTempVC=[[DownloadFormTemplateVC alloc]initWithNibName:@"DownloadFormTemplateVC" bundle:nil];
+    MainMenuViewController *downloadFormTempVC=[[MainMenuViewController alloc]initWithNibName:@"MainMenuViewController" bundle:nil];
     [self.navigationController pushViewController:downloadFormTempVC animated:NO];
  }
 }

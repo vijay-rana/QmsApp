@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MainMenuViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *inspectionButton;
+@property (weak, nonatomic) IBOutlet UIButton *formsEventbButton;
 
 @end

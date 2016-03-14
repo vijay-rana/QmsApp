@@ -47,7 +47,7 @@
     
     // Create a URL request with all the properties (HTTP method, HTTP header).
     NSMutableURLRequest *httpRequest = [[NSMutableURLRequest alloc] init] ;
-    [httpRequest setURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",AuthenticateUser]]];
+    [httpRequest setURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://qmswatch.kindlebit.com/API.asmx/AuthenticateUser"]]];
     [httpRequest setHTTPMethod:@"POST"];
     // Commented as it is not needed.
     [httpRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
@@ -134,7 +134,7 @@
     
     // Create a URL request with all the properties (HTTP method, HTTP header).
     NSMutableURLRequest *httpRequest = [[NSMutableURLRequest alloc] init] ;
-    [httpRequest setURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",CheckLicenseExpiryDate]]];
+    [httpRequest setURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://qmswatch.kindlebit.com/API.asmx/CheckLicenseExpiryDate"]]];
     [httpRequest setHTTPMethod:@"POST"];
     // Commented as it is not needed.
     [httpRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];

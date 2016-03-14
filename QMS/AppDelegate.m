@@ -12,6 +12,7 @@
 #import "DownloadFormTemplateVC.h"
 #import "DataFormVC.h"
 #import "QMSNetworkManager.h"
+#import "MainMenuViewController.h"
 
 @implementation AppDelegate
 
@@ -55,7 +56,7 @@
     else{
         BOOL isLoggedIn = [[QMSCoreDataReusableMethod retrieveFromUserDefaults:@"isLoggedIn"] boolValue];
         if (isLoggedIn == YES) {
-            vc = [[DownloadFormTemplateVC alloc]initWithNibName:@"DownloadFormTemplateVC" bundle:nil];
+            vc = [[MainMenuViewController alloc]initWithNibName:@"MainMenuViewController" bundle:nil];
         }
         else{
             vc = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];

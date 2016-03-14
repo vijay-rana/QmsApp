@@ -24,6 +24,7 @@
 
 #import "QMSDataFormDescEditorViewController.h"
 #import "AppDelegate.h"
+#import "MainMenuViewController.h"
 
 
 @interface DataFormVC ()<MFMailComposeViewControllerDelegate>
@@ -68,7 +69,6 @@ bool isShown = false; //for toggle of view
     if (self) {
         // Custom initialization
 
-        
         if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
         {
             //Use iPhone5 VC
@@ -416,6 +416,16 @@ didTouchedOnDeletePDFTemplate:(id) value{
     
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
+
+- (IBAction)btnHome:(id)sender {
+    
+   
+   
+MainMenuViewController *newEnterNameController = [[MainMenuViewController alloc] initWithNibName:@"MainMenuViewController" bundle:[NSBundle mainBundle]];
+   [[self navigationController] pushViewController:newEnterNameController animated:YES];
+}
+
+
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {

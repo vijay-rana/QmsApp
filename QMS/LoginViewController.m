@@ -194,7 +194,7 @@
         
         codeR = [dict[@"d"][@"ResponseCode"] stringValue];
         codemsg = dict[@"d"][@"Message"];
-        userToken=dict[@"d"][@"Token"];
+        userToken = dict[@"d"][@"Token"];
         
         
         //saving Token
