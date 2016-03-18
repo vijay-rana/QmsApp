@@ -8,7 +8,7 @@
 
 #import "MainMenuViewController.h"
 #import "DataFormVC.h"
-#import "InspectionsViewController.h"
+#import "InspectionDataViewController.h"
 //#import  "NewInspectionViewController.h"
 
 @interface MainMenuViewController ()
@@ -66,7 +66,7 @@
 
 - (IBAction)inspectionButtonAction:(id)sender {
     
-    InspectionsViewController *vc = [[InspectionsViewController alloc]initWithNibName:@"InspectionsViewController" bundle:nil];
+    InspectionDataViewController *vc = [[InspectionDataViewController alloc]initWithNibName:@"InspectionDataViewController" bundle:nil];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
