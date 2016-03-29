@@ -88,7 +88,7 @@
     
     
     
-    [[self navigationController] setNavigationBarHidden:YES animated:YES];
+    //[[self navigationController] setNavigationBarHidden:YES animated:YES];
     
     [[self navigationController] setNavigationBarHidden:YES animated:YES];
     
@@ -842,19 +842,15 @@ didTouchedOnDeletePDFTemplate:(id) value{
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
-    
     //retrive userToken
     NSUserDefaults *retriveUserToken = [NSUserDefaults standardUserDefaults];
     reguserToken = [retriveUserToken stringForKey:@"Token"];
     NSLog(@"----regUserToken ::%@",reguserToken);
     
-    
-    
     // Your JSON data: //{"template":{"Token":"3c2cca0c-4c0e-461c-838a-9c5b6db7162fWCjCHgaz","PDFDataFormName":"aatestsadTemplate","PDFTemplateId":"12","PDFBase64":"JVBERi0xLjMNJeLjz9MNCjcgMCBvYmoNPDwvTGluZWFyaXplZCAxL0wgNzk0NS9PIDkvRSAzNTI0"}}
     
     NSString *uploadArray =[NSString stringWithFormat:@"{\"template\":{\"Token\":\"%@\"},{\"PDFDataFormName\":\"%@\"},{\"PDFTemplateId\":\"%@\"},{\"PDFBase64\":\"%@\"}}",reguserToken,pdfDataFormName,pdfTemplateId,PDFBase64];
     NSLog(@"uploadArray=%@", uploadArray);
-    
     
     // Encode the post string.
     NSData *postRequestData = [uploadArray dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
@@ -1234,7 +1230,7 @@ didTouchedOnDeletePDFTemplate:(id) value{
     
     // Create a URL request with all the properties (HTTP method, HTTP header).
     NSMutableURLRequest *httpRequest = [[NSMutableURLRequest alloc] init] ;
-    [httpRequest setURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",PDFDataFormListByTemplateId]]];
+    [httpRequest setURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",CheckListNameByCustomerId]]];
     [httpRequest setHTTPMethod:@"POST"];
     // Commented as it is not needed.
     [httpRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];

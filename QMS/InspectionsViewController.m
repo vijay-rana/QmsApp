@@ -1,8 +1,3 @@
-
-
-
-
-//
 //  InspectionsViewController.m
 //  QMS
 //
@@ -47,10 +42,6 @@
 - (IBAction)collapseAll:(id)sender;
 
 
-
-
-
-
 @end
 
 @implementation InspectionsViewController
@@ -82,13 +73,8 @@
     [[self navigationController] setNavigationBarHidden:YES animated:YES];
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(expandCollapseNode:) name:@"ProjectTreeNodeButtonClicked" object:nil];
-    
-    
     flagFrButton=YES;
-    
     FlagCheck=YES;
-    
-    
     
 }
 
@@ -228,7 +214,7 @@
     
     
     // Your JSON data: {"template":{"token":"3c2cca0c-4c0e-461c-838a-9c5b6db7162fWCjCHgaz"}}
-    NSString *loginArray =[NSString stringWithFormat:@"{\"template\":{\"token\":\"%@\"}}",reguserToken];
+    NSString *loginArray =[NSString stringWithFormat:@"{\"CustomerId\":{\"token\":\"%@\"}}",reguserToken];
     NSLog(@"loginArray=%@", loginArray);
     
     
@@ -237,7 +223,7 @@
     
     // Create a URL request with all the properties (HTTP method, HTTP header).
     NSMutableURLRequest *httpRequest = [[NSMutableURLRequest alloc] init] ;
-    [httpRequest setURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",DownloadPDFTemplateTypes]]];
+    [httpRequest setURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",CheckListNameByCustomerId]]];
     [httpRequest setHTTPMethod:@"POST"];
     // Commented as it is not needed.
     [httpRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
@@ -258,7 +244,6 @@
         return;
     }
 }
-
 
 - (void)getDownloadPDFTemplateByTemplateTypeId:(NSString *)UserToken :(NSString *)templateTypeid
 {
@@ -281,8 +266,8 @@
     
     //  {"template":{"token":"3c2cca0c-4c0e-461c-838a-9c5b6db7162fWCjCHgaz","TemplateTypeId":"3"}}
     // Your JSON data: {"template":{"token":"3c2cca0c-4c0e-461c-838a-9c5b6db7162fWCjCHgaz","TemplateTypeId":"3"}}
-    NSString *tempArray =[NSString stringWithFormat:@"{\"template\":{\"token\":\"%@\",\"TemplateTypeId\":\"%@\"}}",reguserToken,templateTypeid];
-    NSLog(@"DownloadPDFTemplateByTemplateTypeId=%@", tempArray);
+    NSString *tempArray =[NSString stringWithFormat:@"{\"CustomerId\":{\"token\":\"%@\",\"ChecklistID\":\"%@\"}}",reguserToken,templateTypeid];
+    NSLog(@"CheckListDetailsByCheckListID=%@", tempArray);
     
     
     
@@ -291,8 +276,8 @@
     
     // Create a URL request with all the properties (HTTP method, HTTP header).
     NSMutableURLRequest *httpRequest = [[NSMutableURLRequest alloc] init] ;
-    [httpRequest setURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",DownloadPDFTemplateByTemplateTypeId]]];
-    NSLog(@"%@",DownloadPDFTemplateByTemplateTypeId);
+    [httpRequest setURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",CheckListDetailsByCheckListID]]];
+    NSLog(@"%@",CheckListDetailsByCheckListID);
     [httpRequest setHTTPMethod:@"POST"];
     // Commented as it is not needed.
     [httpRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
@@ -313,7 +298,6 @@
         return;
     }
 }
-
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
@@ -380,7 +364,6 @@
             NSLog(@"--pdfTemplateIdArr::%@",pdfTemplateIdArr);
             
             
-            
             // save user defaults
             NSUserDefaults *tempNameDefaults = [NSUserDefaults standardUserDefaults];
             [tempNameDefaults setObject:[secondMainTemplate valueForKey:@"TemplateName"] forKey:@"tempNameDefaults"];
@@ -400,21 +383,21 @@
             tempTypeArr=[secondMainTemplate valueForKey:@"TemplateTypeName"];
             
             
-            
-            
             tempCreatedDateArr=[[NSMutableArray alloc]init];
             tempCreatedDateArr=[secondMainTemplate valueForKey:@"CreatedDate"];
+            
             
             tempDownloadDateArr=[[NSMutableArray alloc]init];
             tempDownloadDateArr=[secondMainTemplate valueForKey:@"DownloadDate"];
             
-            //modifiedDateArr, *isactiveArr,*pdfBase64Arr;
             
             modifiedDateArr=[[NSMutableArray alloc]init];
             modifiedDateArr=[secondMainTemplate valueForKey:@"ModifiedDate"];
             
+            
             isactiveArr=[[NSMutableArray alloc]init];
             isactiveArr=[secondMainTemplate valueForKey:@"IsActive"];
+            
             
             pdfBase64Arr=[[NSMutableArray alloc]init];
             pdfBase64Arr=[secondMainTemplate valueForKey:@"PDFBase64"];

@@ -740,11 +740,11 @@
 		3E99BCE41A9DC96D00BBFCA6 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3E99BCE61A9DC9D000BBFCA6 /* Home Screen */,
 				6257AA9E1C995CA800634AE9 /* InspectionsForm */,
 				62BFBE181C91ACA3004438ED /* MainMenu Controller */,
 				62BFBE171C91AC86004438ED /* Inspection ViewController */,
 				3E9054731A9DE1E500724167 /* Login Screen */,
-				3E99BCE61A9DC9D000BBFCA6 /* Home Screen */,
 				3ED792CE1AB9AE5A00BA6631 /* Data Forms */,
 				3E1B975C1A9DCD4900DEC137 /* Upload Form Data */,
 				3E1B97531A9DCBBE00DEC137 /* Download Form Templates */,

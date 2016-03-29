@@ -65,6 +65,7 @@
         
         [self presentViewController:mail animated:YES completion:NULL];
     }
+    
     else
     {
         NSLog(@"This device cannot send email");

@@ -73,7 +73,6 @@
     [super viewDidLoad];
     [tableViewDataSource setTableViewSelectionType:kSSTableViewDataSourceSelectionTypeMultiple];
     
-    
     // Do any additional setup after loading the view from its nib.
      [[self navigationController] setNavigationBarHidden:YES animated:YES];
     
@@ -502,8 +501,6 @@
 
 
 }
-
-
 
 - (void)documentInteractionController:(UIDocumentInteractionController *)controller willBeginSendingToApplication:(NSString *)application{
     

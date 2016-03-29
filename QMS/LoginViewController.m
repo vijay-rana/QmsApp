@@ -172,8 +172,7 @@
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
-{
-    
+{ 
    if (httpResponseData)
     {
         NSLog(@"connectionDidFinishLoading");
@@ -217,18 +216,16 @@
         }
         else
         {
-            NSLog(@"----Nope");
+           // NSLog(@"----Nope");
             alertfail=[[UIAlertView alloc]initWithTitle:@"Login" message:codemsg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [alertfail show];
             
         }
         
         if (!jsonArray) {
-            NSLog(@"Error parsing JSON: %@", e);
+          // NSLog(@"Error parsing JSON: %@", e);
         }
     }
-  
-    
     [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
 }
 

@@ -12,8 +12,15 @@
 //@"http://qmswatch.kindlebit.com/API.asmx/AuthenticateUser"]]];UploadPDFDataForm
 
 #define SITE_URL                            @"http://qmswatch.com/"
+#define SITE_URLNEW                            @"http://qmswatch2.kindlebit.com/"
 #define asmx_Url                            @"API.asmx/"
+
+#define asmx_UrlNEW                            @"API.asmx/"
+
 #define qmsFull_Url                         [SITE_URL stringByAppendingString:asmx_Url]
+
+#define qmsFull_UrlNEW                         [SITE_URLNEW stringByAppendingString:asmx_UrlNEW]
+
 
 #define DownloadTemplateFile                [qmsFull_Url stringByAppendingString:@"DownloadTemplateFile"]
 #define UploadPDFDataForm                [qmsFull_Url stringByAppendingString:@"UploadPDFDataForm"]
@@ -27,4 +34,9 @@
 #define CheckLicenseExpiryDate                [qmsFull_Url stringByAppendingString:@"CheckLicenseExpiryDate"]
 #define AuthenticateUser                [qmsFull_Url stringByAppendingString:@"AuthenticateUser"]
 #define UploadPDFDataFormBase64                [qmsFull_Url stringByAppendingString:@"UploadPDFDataFormBase64"]
+
+#define CheckListNameByCustomerId                [qmsFull_UrlNEW stringByAppendingString:@"CheckListNameByCustomerId"]
+#define CheckListDetailsByCheckListID                [qmsFull_UrlNEW stringByAppendingString:@"CheckListDetailsByCheckListID"]
+
+
 #endif /* Constants_h */

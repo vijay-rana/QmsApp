@@ -581,33 +581,29 @@ MainMenuViewController *newEnterNameController = [[MainMenuViewController alloc]
     return isExist;
 }
 
-
 #pragma mark - Messages to fill the tree nodes and the display array
 
 //This function is used to expand and collapse the node as a response to the ProjectTreeNodeButtonClicked notification
 - (void)expandCollapseNode:(NSNotification *)notification
 {
-    if (flagFrButton==NO) {
+    if (flagFrButton == NO) {
         
-        flagFrButton=YES;
+        flagFrButton = YES;
         [self collapseAll];
         
     }
     else
     {
-        
         [self fillDisplayArray];
         [self.tableView reloadData];
-        
         
         //  NSString *tempTypeButton=@"2"; //temptypeId
         
         
         [self getDownloadPDFTemplateByTemplateTypeId:reguserToken :tempIDForSecW];
-        
-        flagFrButton=NO;
+
+        flagFrButton = NO;
     }
-    
 }
 
 //These two functions are used to fill the nodes array with the tree nodes
@@ -648,9 +644,6 @@ MainMenuViewController *newEnterNameController = [[MainMenuViewController alloc]
         }
         
     }
-    
-    
-    
 }
 
 - (NSArray *)fillChildrenForNode
@@ -772,9 +765,7 @@ MainMenuViewController *newEnterNameController = [[MainMenuViewController alloc]
     
     [cell setTreeNode:node];
 
-    cell.cellLabel.text = node.nodeObject;
-    
-    
+     cell.cellLabel.text = node.nodeObject;
     
     if (node.isExpanded) {
         
@@ -789,6 +780,7 @@ MainMenuViewController *newEnterNameController = [[MainMenuViewController alloc]
         [cell.btnSelected setHidden:NO];
         [cell.btnPdfAvailable setHidden:NO];  //check for Download button for resp index is tapped or not
     }
+    
     [cell setNeedsDisplay];
     
     
@@ -900,6 +892,7 @@ MainMenuViewController *newEnterNameController = [[MainMenuViewController alloc]
 }
 
 - (IBAction)btnDataFormCollectDataTapped:(id)sender {
+    
 }
 
 - (IBAction)btnFormsMenuTapped:(id)sender {

@@ -1067,7 +1067,7 @@
     
     NSString *tempArray =[NSString stringWithFormat:@"{\"base64\":\"%@\",\"token\":\"%@\",\"fileName\":\"%@\",\"templateId\":\"%@\"}",pdfBase64,reguserToken,fileName,templateId];
     
-//    NSLog(@"downloadPDFTemplateFile=%@", tempArray);
+    //    NSLog(@"downloadPDFTemplateFile=%@", tempArray);
     
     
     // Encode the post string.
